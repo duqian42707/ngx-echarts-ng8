@@ -19,12 +19,18 @@ export class CodeBlockComponent implements OnInit {
 
   ngOnInit() {
     if (this.html) {
-      this.htmlCode = this.html.match(/DEMO START -->\n((.*\n)*)<!-- DEMO END/)[1];
+      // this.htmlCode = this.html.match(/DEMO START -->\n((.*\n)*)<!-- DEMO END/)[1];
+      const startTxt = '<!-- DEMO START -->';
+      const endTxt = '<!-- DEMO END -->';
+      const index1 = this.html.indexOf(startTxt);
+      const index2 = this.html.indexOf(endTxt);
+      this.htmlCode = this.html.substring(index1 + startTxt.length, index2).trim();
     }
 
     if (this.component) {
       this.componentCode = this.component.replace(
-        / *\/\/ IGNORE START[\s\S]*?\/\/ IGNORE END\n/g,
+        // / *\/\/ IGNORE START[\s\S]*?\/\/ IGNORE END\n/g,
+        / *\/\/ IGNORE START[\s\S]*?\/\/ IGNORE END/g,
         ''
       );
     }
