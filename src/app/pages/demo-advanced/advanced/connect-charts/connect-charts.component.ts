@@ -2,8 +2,8 @@ import { Component, AfterViewInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
 import { getInstanceByDom, connect } from 'echarts';
 // IGNORE START
-import html from './connect-charts.component.html';
-import component from './connect-charts.component.txt';
+import html from 'raw-loader!./connect-charts.component.html';
+import component from 'raw-loader!./connect-charts.component.txt';
 // IGNORE END
 
 @Component({

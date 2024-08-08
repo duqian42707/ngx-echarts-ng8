@@ -3,8 +3,8 @@ import type { ECElementEvent, EChartsOption } from 'echarts';
 import type { ECActionEvent } from 'echarts/types/src/util/types';
 import LinearGradient from 'zrender/lib/graphic/LinearGradient';
 // IGNORE START
-import html from './basic-events.component.html';
-import component from './basic-events.component.txt';
+import html from 'raw-loader!./basic-events.component.html';
+import component from 'raw-loader!./basic-events.component.txt';
 // IGNORE END
 
 @Component({

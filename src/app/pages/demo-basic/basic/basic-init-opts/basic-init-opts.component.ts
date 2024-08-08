@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './basic-init-opts.component.html';
-import component from './basic-init-opts.component.txt';
+import html from 'raw-loader!./basic-init-opts.component.html';
+import component from 'raw-loader!./basic-init-opts.component.txt';
 // IGNORE END
 
 @Component({

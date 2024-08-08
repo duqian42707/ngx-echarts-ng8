@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './tree-radial.component.html';
-import component from './tree-radial.component.txt';
+import html from 'raw-loader!./tree-radial.component.html';
+import component from 'raw-loader!./tree-radial.component.txt';
 // IGNORE END
 
 @Component({

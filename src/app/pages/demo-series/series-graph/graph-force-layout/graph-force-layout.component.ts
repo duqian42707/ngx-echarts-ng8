@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './graph-force-layout.component.html';
-import component from './graph-force-layout.component.txt';
+import html from 'raw-loader!./graph-force-layout.component.html';
+import component from 'raw-loader!./graph-force-layout.component.txt';
 // IGNORE END
 
 @Component({

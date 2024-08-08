@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './basic-dataset.component.html';
-import component from './basic-dataset.component.txt';
+import html from 'raw-loader!./basic-dataset.component.html';
+import component from 'raw-loader!./basic-dataset.component.txt';
 // IGNORE END
 
 @Component({

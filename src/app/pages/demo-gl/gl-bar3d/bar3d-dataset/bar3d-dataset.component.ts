@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 // IGNORE START
-import html from './bar3d-dataset.component.html';
-import component from './bar3d-dataset.component.txt';
+import html from 'raw-loader!./bar3d-dataset.component.html';
+import component from 'raw-loader!./bar3d-dataset.component.txt';
 // IGNORE END
 
 @Component({

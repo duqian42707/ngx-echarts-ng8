@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { ECharts, EChartsOption } from 'echarts';
 import { NzMessageService } from 'ng-zorro-antd/message';
 // IGNORE START
-import html from './basic-instance.component.html';
-import component from './basic-instance.component.txt';
+import html from 'raw-loader!./basic-instance.component.html';
+import component from 'raw-loader!./basic-instance.component.txt';
 // IGNORE END
 
 @Component({

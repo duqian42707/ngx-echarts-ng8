@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './heatmap-discrete.component.html';
-import component from './heatmap-discrete.component.txt';
+import html from 'raw-loader!./heatmap-discrete.component.html';
+import component from 'raw-loader!./heatmap-discrete.component.txt';
 // IGNORE END
 
 @Component({

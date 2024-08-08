@@ -5,8 +5,8 @@ import { map } from 'rxjs/operators';
 import * as util from 'zrender/lib/core/util';
 import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './tree-from-left-to-right.component.html';
-import component from './tree-from-left-to-right.component.txt';
+import html from 'raw-loader!./tree-from-left-to-right.component.html';
+import component from 'raw-loader!./tree-from-left-to-right.component.txt';
 // IGNORE END
 
 @Component({

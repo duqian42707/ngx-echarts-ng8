@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './graph-simple.component.html';
-import component from './graph-simple.component.txt';
+import html from 'raw-loader!./graph-simple.component.html';
+import component from 'raw-loader!./graph-simple.component.txt';
 // IGNORE END
 
 @Component({

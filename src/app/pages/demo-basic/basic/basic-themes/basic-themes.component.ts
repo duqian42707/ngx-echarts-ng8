@@ -4,9 +4,9 @@ import { EChartsOption } from 'echarts';
 import { ThemeOption } from 'projects/ngx-echarts/src/public-api';
 import { CoolTheme } from './cool-theme';
 // IGNORE START
-import html from './basic-themes.component.html';
-import component from './basic-themes.component.txt';
-import data from './cool-theme.txt';
+import html from 'raw-loader!./basic-themes.component.html';
+import component from 'raw-loader!./basic-themes.component.txt';
+import data from 'raw-loader!./cool-theme.txt';
 // IGNORE END
 
 @Component({

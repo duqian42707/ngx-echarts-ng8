@@ -2,8 +2,8 @@ import { Component, OnDestroy } from '@angular/core';
 import { ECharts, EChartsOption } from 'echarts';
 import * as util from 'zrender/lib/core/util';
 // IGNORE START
-import html from './line-draggable.component.html';
-import component from './line-draggable.component.txt';
+import html from 'raw-loader!./line-draggable.component.html';
+import component from 'raw-loader!./line-draggable.component.txt';
 // IGNORE END
 
 const SymbolSize = 20;

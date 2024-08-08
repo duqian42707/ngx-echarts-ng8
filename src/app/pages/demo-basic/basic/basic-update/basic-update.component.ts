@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './basic-update.component.html';
-import component from './basic-update.component.txt';
+import html from 'raw-loader!./basic-update.component.html';
+import component from 'raw-loader!./basic-update.component.txt';
 // IGNORE END
 
 @Component({
