@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
 import html from './heatmap-discrete.component.html';
 import component from './heatmap-discrete.component.txt';
@@ -9,7 +9,7 @@ import component from './heatmap-discrete.component.txt';
 @Component({
   selector: 'app-heatmap-discrete',
   templateUrl: './heatmap-discrete.component.html',
-  styleUrl: './heatmap-discrete.component.scss',
+  styleUrls: ['./heatmap-discrete.component.scss'],
 })
 export class HeatmapDiscreteComponent implements OnInit {
   // IGNORE START

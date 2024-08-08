@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
 import html from './heatmap-calendar.component.html';
 import component from './heatmap-calendar.component.txt';
@@ -9,7 +9,7 @@ import component from './heatmap-calendar.component.txt';
 @Component({
   selector: 'app-heatmap-calendar',
   templateUrl: './heatmap-calendar.component.html',
-  styleUrl: './heatmap-calendar.component.scss',
+  styleUrls: ['./heatmap-calendar.component.scss'],
 })
 export class HeatmapCalendarComponent implements OnInit {
   // IGNORE START

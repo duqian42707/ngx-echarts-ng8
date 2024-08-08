@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import type { ECharts, EChartsOption } from 'echarts';
+import { ECharts, EChartsOption } from 'echarts';
 import { NzMessageService } from 'ng-zorro-antd/message';
 // IGNORE START
 import html from './basic-instance.component.html';

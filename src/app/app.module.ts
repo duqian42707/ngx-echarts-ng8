@@ -2,23 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
 import { FormsModule } from '@angular/forms';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData, LocationStrategy, HashLocationStrategy } from '@angular/common';
-import en from '@angular/common/locales/en';
+import zh from '@angular/common/locales/zh';
 import { NgZorroCustomModule } from './shared/ng-zorro-custom.module';
-import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
+import { NgxEchartsModule, provideEcharts} from '../../projects/ngx-echarts/src/lib/ngx-echarts.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 
+import { NZ_I18N, zh_CN } from 'ng-zorro-antd';
 // Import echarts extensions
 import 'echarts-gl';
 // Import echarts themes
 import 'echarts/theme/macarons.js';
 
-registerLocaleData(en);
+registerLocaleData(zh);
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,18 +29,19 @@ registerLocaleData(en);
     LayoutModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     NgZorroCustomModule,
     MarkdownModule.forRoot(),
     BrowserAnimationsModule,
-    NgxEchartsDirective,
+    NgxEchartsModule,
   ],
   providers: [
+    { provide: NZ_I18N, useValue: zh_CN },
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
     },
     provideEcharts(),
-    provideHttpClient(withInterceptorsFromDi()),
   ],
 })
 export class AppModule {}

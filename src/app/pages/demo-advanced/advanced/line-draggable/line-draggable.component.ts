@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import type { ECharts, EChartsOption } from 'echarts';
+import { ECharts, EChartsOption } from 'echarts';
 import * as util from 'zrender/lib/core/util';
 // IGNORE START
 import html from './line-draggable.component.html';

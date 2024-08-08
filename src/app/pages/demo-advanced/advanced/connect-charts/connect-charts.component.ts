@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 import { getInstanceByDom, connect } from 'echarts';
 // IGNORE START
 import html from './connect-charts.component.html';

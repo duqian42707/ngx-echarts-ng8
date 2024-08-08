@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
 import html from './tree-radial.component.html';
 import component from './tree-radial.component.txt';

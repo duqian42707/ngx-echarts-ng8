@@ -1,4 +1,4 @@
-import type { ThemeType } from '@ant-design/icons-angular';
+import { ThemeType } from '@ant-design/icons-angular';
 
 export interface AppMenu {
   path: string;

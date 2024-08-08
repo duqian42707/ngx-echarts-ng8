@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
 import html from './basic-init-opts.component.html';
 import component from './basic-init-opts.component.txt';

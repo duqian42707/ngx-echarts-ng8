@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as util from 'zrender/lib/core/util';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
 import html from './tree-from-left-to-right.component.html';
 import component from './tree-from-left-to-right.component.txt';

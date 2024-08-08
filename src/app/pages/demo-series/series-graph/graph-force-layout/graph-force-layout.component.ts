@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
 import html from './graph-force-layout.component.html';
 import component from './graph-force-layout.component.txt';

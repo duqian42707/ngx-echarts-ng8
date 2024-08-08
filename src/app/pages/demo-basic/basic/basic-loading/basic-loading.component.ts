@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
-import html from './basic-loading.component.html';
-import component from './basic-loading.component.txt';
+import html from 'raw-loader!./basic-loading.component.html';
+import component from 'raw-loader!./basic-loading.component.txt';
 // IGNORE END
 
 @Component({
