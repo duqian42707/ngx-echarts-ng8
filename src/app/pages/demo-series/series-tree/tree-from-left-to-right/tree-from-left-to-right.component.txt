@@ -3,9 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as util from 'zrender/lib/core/util';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
-declare const require: any;
+import html from 'raw-loader!./tree-from-left-to-right.component.html';
+import component from 'raw-loader!./tree-from-left-to-right.component.txt';
 // IGNORE END
 
 @Component({
@@ -15,10 +16,8 @@ declare const require: any;
 })
 export class TreeFromLeftToRightComponent implements OnInit {
   // IGNORE START
-  html =
-    require('!!html-loader?{"minimize": {"removeComments":false,"caseSensitive":true}}!./tree-from-left-to-right.component.html')
-      .default;
-  component = require('!!raw-loader!./tree-from-left-to-right.component.ts').default;
+  html = html;
+  component = component;
   // IGNORE END
   options: Observable<EChartsOption>;
   constructor(private http: HttpClient) {}

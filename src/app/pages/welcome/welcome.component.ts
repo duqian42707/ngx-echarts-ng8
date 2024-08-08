@@ -10,8 +10,8 @@ export class WelcomeComponent {
   ## Install
   \`\`\`bash
   # if you use npm
-  npm install echarts --save
-  npm install ngx-echarts --save
+  npm install echarts-ng8 --save
+  npm install ngx-echarts-ng8 --save
   # or if you use yarn
   yarn add echarts ngx-echarts
   \`\`\`
@@ -19,7 +19,7 @@ export class WelcomeComponent {
   importText = `
   ## Import Standalone Directive
   \`\`\`typescript
-  import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
+  import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts-ng8';
 
   @Component({
     selector: 'app-root',
@@ -37,7 +37,7 @@ export class WelcomeComponent {
   importNgModuleText = `
   ## Import NgModule
   \`\`\`typescript
-  import { NgxEchartsModule } from 'ngx-echarts';
+  import { NgxEchartsModule } from 'ngx-echarts-ng8';
   @NgModule({
     imports: [
       ...,

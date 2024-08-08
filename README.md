@@ -1,19 +1,18 @@
 <div align="center">
-  <a href="https://xieziyu.github.io/ngx-echarts">
+  <a href="https://duqian42707.github.io/ngx-echarts-ng8">
     <img src="./src/assets/img/logo.svg" alt="Logo" width="80">
   </a>
-  <h3 align="center">NGX-ECHARTS</h3>
+  <h3 align="center">NGX-ECHARTS-NG8</h3>
   <p align="center">
     Angular directive for <a href="https://github.com/apache/incubator-echarts">Apache ECharts</a>
   </p>
   <p align="center">
-    <a href="https://xieziyu.github.io/ngx-echarts">Online Demo</a> |
-    <a href="https://github.com/xieziyu/ngx-echarts-starter">Starter</a>
+    <a href="https://duqian42707.github.io/ngx-echarts-ng8">Online Demo</a>
   </p>
   <p align="center">
-    <a href="https://www.npmjs.com/package/ngx-echarts"><img src="https://img.shields.io/npm/v/ngx-echarts.svg"></a>
-    <a href="https://www.npmjs.com/package/ngx-echarts"><img src="https://img.shields.io/npm/dm/ngx-echarts.svg"></a>
-    <a href="https://github.com/xieziyu/ngx-echarts/actions/workflows/ci.yaml"><img src="https://github.com/xieziyu/ngx-echarts/actions/workflows/ci.yaml/badge.svg"></a>
+    <a href="https://www.npmjs.com/package/ngx-echarts-ng8"><img src="https://img.shields.io/npm/v/ngx-echarts-ng8.svg"></a>
+    <a href="https://www.npmjs.com/package/ngx-echarts-ng8"><img src="https://img.shields.io/npm/dm/ngx-echarts-ng8.svg"></a>
+    <a href="https://github.com/duqian42707/ngx-echarts-ng8/actions/workflows/ci.yaml"><img src="https://github.com/duqian42707/ngx-echarts-ng8/actions/workflows/ci.yaml/badge.svg"></a>
   </p>
 </div>
 
@@ -45,38 +44,27 @@
 
 Latest version @npm:
 
-- `v18.0.0` for Angular 18
-- `v17.2.0` for Angular 17
-- `v16.2.0` for Angular 16
-- `v15.0.3` for Angular 15
-- `v14.0.0` for Angular 14
-- `v8.0.1` for Angular 13
-- `v7.1.0` for Angular >= 11, < 13
-- `v6.0.1` for Angular >= 10, < 11
-- `v5.2.2` for Angular >= 6, < 10
-- `v2.3.1` for Angular < 6 (Please refer to https://github.com/xieziyu/ngx-echarts/blob/v2.x/README.md)
-
-A starter project on Github: https://github.com/xieziyu/ngx-echarts-starter
+- `v1.0.0` for Angular 8
 
 # Latest Update
 
-* 2024.05.25: v18.0.0
-  + Feat: Upgrade to angular 18
+* 2024.08.08: v1.0.0
+  + Feat: Adapt Angular 8.x and Echarts 5.x
 
 [CHANGELOG.md](./CHANGELOG.md)
 
 # Installation
 
-- Since v5.0
+- With Angular8
 
   ```bash
   # if you use npm
   npm install echarts -S
-  npm install ngx-echarts -S
+  npm install ngx-echarts-ng8 -S
 
   # or if you use yarn
   yarn add echarts
-  yarn add ngx-echarts
+  yarn add ngx-echarts-ng8
   ```
 
 - If you need ECharts GL support, please install it first:
@@ -90,21 +78,17 @@ A starter project on Github: https://github.com/xieziyu/ngx-echarts-starter
 
 - Import other extensions such as themes or `echarts-gl` in your `main.ts`: [ECharts Extensions](#echarts-extensions)
 
-## Upgrade from v4.x
-
-1. import `echarts` and provide it in `NgxEchartsModule.forRoot({ echarts })`.
-2. `NgxEchartsCoreModule` is removed.
 
 # Usage
 
-Please refer to the [demo](https://xieziyu.github.io/ngx-echarts) page.
+Please refer to the [demo](https://duqian42707.github.io/ngx-echarts-ng8) page.
 
 ## Standalone
 
 import `NgxEchartsDirective` and `provideEcharts`. Or you can use `provideEchartsCore` to do treeshaking custom build.
 
 ```typescript
-import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts';
+import { NgxEchartsDirective, provideEcharts } from 'ngx-echarts-ng8';
 
 @Component({
   selector: 'app-root',
@@ -124,7 +108,7 @@ export class AppComponent {}
 import `NgxEchartsModule`:
 
 ```typescript
-import { NgxEchartsModule } from 'ngx-echarts';
+import { NgxEchartsModule } from 'ngx-echarts-ng8';
 
 @NgModule({
   imports: [
@@ -147,7 +131,7 @@ You can also directly pass the echarts instead which will slow down initial rend
 
 ```typescript
 import * as echarts from 'echarts';
-import { NgxEchartsModule } from 'ngx-echarts';
+import { NgxEchartsModule } from 'ngx-echarts-ng8';
 
 @NgModule({
   imports: [
@@ -334,7 +318,7 @@ It supports following event outputs:
 | chartRendered                  | echarts event: `'rendered'`            |
 | chartFinished                  | echarts event: `'finished'`            |
 
-You can refer to the ECharts tutorial: [Events and Actions in ECharts](https://echarts.apache.org/en/tutorial.html#Events%20and%20Actions%20in%20ECharts) for more details of the event params. You can also refer to the [demo](https://xieziyu.github.io/#/ngx-echarts/demo) page for a detailed example.
+You can refer to the ECharts tutorial: [Events and Actions in ECharts](https://echarts.apache.org/en/tutorial.html#Events%20and%20Actions%20in%20ECharts) for more details of the event params. You can also refer to the [demo](https://duqian42707.github.io/ngx-echarts-ng8) page for a detailed example.
 
 # Custom Build
 
@@ -349,7 +333,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
+import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts-ng8';
 
 import { AppComponent } from './app.component';
 
@@ -429,7 +413,7 @@ import 'echarts/src/component/toolbox';
 And then inject it in your `NgxEchartsModule`:
 
 ```ts
-import { NgxEchartsModule } from 'ngx-echarts';
+import { NgxEchartsModule } from 'ngx-echarts-ng8';
 import * as echarts from './custom-echarts';
 
 @NgModule({
@@ -471,7 +455,7 @@ function (root, factory) {
 You can change the chart locale registering a built-in locale (located in `node_modules/echarts/lib/i18n/`) or a custom locale object. To register a locale, you will need to change the module that echart is being imported (usually `app.module.ts`).
 
 ```ts
-import {NgxEchartsModule} from "ngx-echarts";
+import {NgxEchartsModule} from "ngx-echarts-ng8";
 import * as echarts from 'echarts/core';
 import langCZ from 'echarts/lib/i18n/langCZ';
 

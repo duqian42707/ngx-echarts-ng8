@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { NgZorroCustomModule } from './shared/ng-zorro-custom.module';
-import { NgxEchartsModule, provideEcharts} from '../../projects/ngx-echarts/src/lib/ngx-echarts.module';
+import { NgxEchartsModule, provideEcharts } from 'projects/ngx-echarts-ng8/src/public-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

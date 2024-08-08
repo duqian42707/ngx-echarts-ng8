@@ -1,0 +1,21 @@
+{
+  "name": "ngx-echarts-ng8",
+  "version": "1.0.0",
+  "author": "duqian",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "ng",
+    "echarts",
+    "chart"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duqian42707/ngx-echarts-ng8.git"
+  },
+  "homepage": "https://duqian42707.github.io/ngx-echarts-ng8",
+  "bugs": "https://github.com/duqian42707/ngx-echarts-ng8/issues",
+  "peerDependencies": {
+    "echarts": ">=5.0.0"
+  }
+}

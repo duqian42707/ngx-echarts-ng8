@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
-declare const require: any;
+import html from 'raw-loader!./heatmap-discrete.component.html';
+import component from 'raw-loader!./heatmap-discrete.component.txt';
 // IGNORE END
 
 @Component({
   selector: 'app-heatmap-discrete',
   templateUrl: './heatmap-discrete.component.html',
-  styleUrl: './heatmap-discrete.component.scss',
+  styleUrls: ['./heatmap-discrete.component.scss'],
 })
 export class HeatmapDiscreteComponent implements OnInit {
   // IGNORE START
-  html =
-    require('!!html-loader?{"minimize": {"removeComments":false,"caseSensitive":true}}!./heatmap-discrete.component.html')
-      .default;
-  component = require('!!raw-loader!./heatmap-discrete.component.ts').default;
+  html = html;
+  component = component;
   // IGNORE END
   options: EChartsOption;
   noise = getNoiseHelper();

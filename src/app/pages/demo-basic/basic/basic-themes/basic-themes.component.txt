@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import type { EChartsOption } from 'echarts';
-import { ThemeOption } from 'ngx-echarts';
+import { EChartsOption } from 'echarts';
+import { ThemeOption } from 'projects/ngx-echarts-ng8/src/public-api';
 import { CoolTheme } from './cool-theme';
 // IGNORE START
-declare const require: any;
+import html from 'raw-loader!./basic-themes.component.html';
+import component from 'raw-loader!./basic-themes.component.txt';
+import data from 'raw-loader!./cool-theme.txt';
 // IGNORE END
 
 @Component({
@@ -13,11 +15,9 @@ declare const require: any;
 })
 export class BasicThemesComponent {
   // IGNORE START
-  html =
-    require('!!html-loader?{"minimize": {"removeComments":false,"caseSensitive":true}}!./basic-themes.component.html')
-      .default;
-  component = require('!!raw-loader!./basic-themes.component.ts').default;
-  data = require('!!raw-loader!./cool-theme.ts').default;
+  html = html;
+  component = component;
+  data = data;
   // IGNORE END
   theme: string | ThemeOption;
   coolTheme = CoolTheme;

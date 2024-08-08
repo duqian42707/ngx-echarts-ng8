@@ -21,11 +21,11 @@
       "dom"
     ],
     "paths": {
-      "ngx-echarts": [
-        "dist/ngx-echarts"
+      "ngx-echarts-ng8": [
+        "dist/ngx-echarts-ng8"
       ],
-      "ngx-echarts/*": [
-        "dist/ngx-echarts/*"
+      "ngx-echarts-ng8/*": [
+        "dist/ngx-echarts-ng8/*"
       ]
     }
   },

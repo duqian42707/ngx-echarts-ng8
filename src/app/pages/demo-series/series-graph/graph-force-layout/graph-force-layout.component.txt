@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
-declare const require: any;
+import html from 'raw-loader!./graph-force-layout.component.html';
+import component from 'raw-loader!./graph-force-layout.component.txt';
 // IGNORE END
 
 @Component({
@@ -11,10 +12,8 @@ declare const require: any;
 })
 export class GraphForceLayoutComponent implements OnInit {
   // IGNORE START
-  html =
-    require('!!html-loader?{"minimize": {"removeComments":false,"caseSensitive":true}}!./graph-force-layout.component.html')
-      .default;
-  component = require('!!raw-loader!./graph-force-layout.component.ts').default;
+  html = html;
+  component = component;
   // IGNORE END
   options: EChartsOption;
 

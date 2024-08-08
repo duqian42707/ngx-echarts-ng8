@@ -47,7 +47,7 @@ export class NgxEchartsDirective implements OnChanges, OnDestroy, OnInit, AfterV
   @Input() loadingType = 'default';
   @Input() loadingOpts: object | null = null;
 
-  // ngx-echarts events
+  // ngx-echarts-ng8 events
   @Output() chartInit = new EventEmitter<any>();
   @Output() optionsError = new EventEmitter<Error>();
 

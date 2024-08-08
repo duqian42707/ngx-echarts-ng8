@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxEchartsModule } from 'projects/ngx-echarts/src/public-api';
+import { NgxEchartsModule } from 'projects/ngx-echarts-ng8/src/public-api';
 import { SharedModule } from '../../shared/shared.module';
 import { DemoSeriesRoutingModule } from './demo-series-routing.module';
 import { SeriesGraphComponent } from './series-graph/series-graph.component';

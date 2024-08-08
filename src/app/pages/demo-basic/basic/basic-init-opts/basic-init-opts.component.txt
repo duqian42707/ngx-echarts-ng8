@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import type { EChartsOption } from 'echarts';
+import { EChartsOption } from 'echarts';
 // IGNORE START
-declare const require: any;
+import html from 'raw-loader!./basic-init-opts.component.html';
+import component from 'raw-loader!./basic-init-opts.component.txt';
 // IGNORE END
 
 @Component({
@@ -11,10 +12,8 @@ declare const require: any;
 })
 export class BasicInitOptsComponent {
   // IGNORE START
-  html =
-    require('!!html-loader?{"minimize": {"removeComments":false,"caseSensitive":true}}!./basic-init-opts.component.html')
-      .default;
-  component = require('!!raw-loader!./basic-init-opts.component.ts').default;
+  html = html;
+  component = component;
   // IGNORE END
   initOpts = {
     renderer: 'svg',

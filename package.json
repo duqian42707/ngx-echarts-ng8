@@ -1,5 +1,5 @@
 {
-  "name": "ngx-echarts-ng8",
+  "name": "ngx-echarts-ng8-demo",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "convert": "node ./scripts/convert.js",
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href ./",
-    "build:lib": "ng build ngx-echarts",
-    "build:lib:prod": "ng build ngx-echarts --configuration production",
+    "build:lib": "ng build ngx-echarts-ng8",
+    "build:lib:prod": "ng build ngx-echarts-ng8 --configuration production",
     "test": "ng test",
-    "test:lib": "ng test ngx-echarts",
+    "test:lib": "ng test ngx-echarts-ng8",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -34,6 +34,7 @@
   "devDependencies": {
     "@angular-builders/custom-webpack": "^8.4.1",
     "@angular-devkit/build-angular": "~0.803.29",
+    "@angular-devkit/build-ng-packagr": "^0.803.29",
     "@angular/cli": "~8.3.29",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
@@ -48,6 +49,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^5.7.1",
     "ngx-markdown": "^8.2.2",
     "protractor": "~7.0.0",
     "raw-loader": "^4.0.2",

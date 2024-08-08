@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { EChartsOption } from 'echarts';
-// import { ThemeOption } from 'ngx-echarts';
-import { ThemeOption } from 'projects/ngx-echarts/src/public-api';
+import { ThemeOption } from 'projects/ngx-echarts-ng8/src/public-api';
 import { CoolTheme } from './cool-theme';
 // IGNORE START
 import html from 'raw-loader!./basic-themes.component.html';
