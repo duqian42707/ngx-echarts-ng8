@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxEchartsModule } from 'ngx-echarts';
+import { NgxEchartsModule } from 'projects/ngx-echarts/src/public-api';
 import { SharedModule } from '../../shared/shared.module';
 import { DemoBasicRoutingModule } from './demo-basic-routing.module';
 import { BasicComponent } from './basic/basic.component';
