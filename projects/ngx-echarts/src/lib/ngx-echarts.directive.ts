@@ -16,7 +16,7 @@ import {
 import { Observable, ReplaySubject, Subject, Subscription, asyncScheduler } from 'rxjs';
 import { switchMap, throttleTime } from 'rxjs/operators';
 import { ChangeFilterV2 } from './change-filter-v2';
-import type { EChartsOption, ECharts, ECElementEvent } from 'echarts';
+import { EChartsOption, ECharts, ECElementEvent } from 'echarts';
 
 export interface NgxEchartsConfig {
   echarts: any | (() => Promise<any>);
@@ -28,7 +28,6 @@ export type ThemeOption = Record<string, any>;
 export const NGX_ECHARTS_CONFIG = new InjectionToken<NgxEchartsConfig>('NGX_ECHARTS_CONFIG');
 
 @Directive({
-  standalone: true,
   selector: 'echarts, [echarts]',
   exportAs: 'echarts',
 })
@@ -98,13 +97,13 @@ export class NgxEchartsDirective implements OnChanges, OnDestroy, OnInit, AfterV
   private chart: ECharts;
   private chart$ = new ReplaySubject<ECharts>(1);
   private echarts: any;
-  private resizeOb: ResizeObserver;
+  private resizeOb: any;
   private resize$ = new Subject<void>();
   private resizeSub: Subscription;
   private initChartTimer?: number;
   private changeFilter = new ChangeFilterV2();
   private loadingSub: Subscription;
-  private resizeObFired: boolean = false;
+  private resizeObFired = false;
 
   constructor(
     @Inject(NGX_ECHARTS_CONFIG) config: NgxEchartsConfig,
@@ -120,7 +119,7 @@ export class NgxEchartsDirective implements OnChanges, OnDestroy, OnInit, AfterV
   }
 
   ngOnInit() {
-    if (!window.ResizeObserver) {
+    if (!window['ResizeObserver']) {
       throw new Error('please install a polyfill for ResizeObserver');
     }
     this.resizeSub = this.resize$
@@ -131,7 +130,7 @@ export class NgxEchartsDirective implements OnChanges, OnDestroy, OnInit, AfterV
       // https://github.com/xieziyu/ngx-echarts/issues/413
       this.resizeOb = this.ngZone.runOutsideAngular(
         () =>
-          new window.ResizeObserver(entries => {
+          new window['ResizeObserver'](entries => {
             for (const entry of entries) {
               if (entry.target === this.el.nativeElement) {
                 // Ignore first fire on insertion, no resize actually happened

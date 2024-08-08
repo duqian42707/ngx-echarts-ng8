@@ -24,7 +24,7 @@ const provideEchartsCore = (config: NgxEchartsConfig): Provider => {
 };
 
 @NgModule({
-  imports: [NgxEchartsDirective],
+  declarations: [NgxEchartsDirective],
   exports: [NgxEchartsDirective],
 })
 export class NgxEchartsModule {
